@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 public class InspectorGadgetMessages {
 
 	@NonNls
-	public static final String BUNDLE = "messages.inspectorGadgetMessages";
+	public static final String BUNDLE = "messages.InspectorGadgetMessages";
 
 	private InspectorGadgetMessages() {
 	}

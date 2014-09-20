@@ -36,7 +36,7 @@
 		                 level="ERROR" enabledByDefault="true" groupName="InspectorGadget" order="last"/>
 		<localInspection language="JAVA"
 		                 implementationClass="com.idi.intellij.plugin.inspector.gadget.inspection.WSConsumersInspection"
-		                 shortName="WSConsumer" displayName="WebService Consumer model validation"
+		                 shortName="WSConsumers" displayName="WebService Consumer model validation"
 		                 level="INFO" enabledByDefault="true" groupName="InspectorGadget" order="last"/>
 
 		<projectConfigurable instance="com.idi.intellij.plugin.inspector.gadget.config.InspectorConfigView"

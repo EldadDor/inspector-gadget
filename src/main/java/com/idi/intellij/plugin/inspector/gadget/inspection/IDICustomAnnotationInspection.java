@@ -69,6 +69,7 @@ public class IDICustomAnnotationInspection extends BaseLocalInspectionTool {
 						log.debug("visitMethod(): psiAnnotation=" + psiAnnotation.getQualifiedName() + " method=" + method.getName());
 					}
 					MethodSignatureBackedByPsiMethod methodSignature = MethodSignatureBackedByPsiMethod.create(method, PsiSubstitutor.EMPTY);
+
 					PsiElement methodName = method.getNameIdentifier();
 					final PsiClass aClass = method.getContainingClass();
 					String description = message("annotationMarker.refactoring", HighlightMessageUtil.getSymbolName(aClass, PsiSubstitutor.EMPTY));
