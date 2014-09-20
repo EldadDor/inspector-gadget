@@ -1,0 +1,66 @@
+<idea-plugin version="2">
+	<id>InspectorGadget</id>
+	<name>InspectorGadget</name>
+	<version>1.0</version>
+	<vendor email="eldad.dor@yashir.co.il" url="http://www.555.co.il">IDI</vendor>
+
+	<description><![CDATA[
+  Inspector Gadget plugin for inspection
+    ]]></description>
+
+	<change-notes><![CDATA[
+      		  <b>Version 1.0.0</b>
+      		  	   		  <ul>
+      		      	        <li>First Inspections</li>
+      		  		      </ul>
+    ]]>
+	</change-notes>
+
+	<!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+	<idea-version since-build="129.713"/>
+
+	<!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+		   on how to target different products -->
+	<!-- uncomment to enable plugin in all products
+	  <depends>com.intellij.modules.lang</depends>
+	  -->
+
+	<extensions defaultExtensionNs="com.intellij">
+		<localInspection language="JAVA"
+		                 implementationClass="com.idi.intellij.plugin.inspector.gadget.inspection.IDICustomAnnotationInspection"
+		                 shortName="IDICustomAnnotation" displayName="Inspect IDI Custom Annotations"
+		                 level="WARNING" enabledByDefault="true" groupName="InspectorGadget" order="last"/>
+		<localInspection language="JAVA"
+		                 implementationClass="com.idi.intellij.plugin.inspector.gadget.inspection.IDIAstroTestConventionInspection"
+		                 shortName="IDIAstroTestConvention" displayName="Astro Test Convention"
+		                 level="ERROR" enabledByDefault="true" groupName="InspectorGadget" order="last"/>
+		<localInspection language="JAVA"
+		                 implementationClass="com.idi.intellij.plugin.inspector.gadget.inspection.WSConsumersInspection"
+		                 shortName="WSConsumer" displayName="WebService Consumer model validation"
+		                 level="INFO" enabledByDefault="true" groupName="InspectorGadget" order="last"/>
+
+		<projectConfigurable instance="com.idi.intellij.plugin.inspector.gadget.config.InspectorConfigView"
+		                     id="InspectorGadget" displayName="InspectorGadget Settings" order="last">
+		</projectConfigurable>
+
+		<!--<projectService serviceImplementation="com.idi.intellij.plugin.inspector.gadget.model.InsepctorSettingsConfiguration"/>-->
+		<!-- Add your extensions here -->
+	</extensions>
+
+	<application-components>
+
+		<component>
+			<implementation-class>com.idi.intellij.plugin.inspector.gadget.model.InsepctorSettingsConfiguration</implementation-class>
+			<interface-class>com.idi.intellij.plugin.inspector.gadget.model.InsepctorSettingsConfiguration</interface-class>
+		</component>
+	</application-components>
+
+	<project-components>
+		<!-- Add your project components here -->
+	</project-components>
+
+	<actions>
+		<!-- Add your actions here -->
+	</actions>
+
+</idea-plugin>
